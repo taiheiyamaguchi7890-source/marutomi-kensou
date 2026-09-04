@@ -239,6 +239,24 @@
     .section-lead{margin-bottom:32px;}
   }
 </style>
+
+<style>
+/* HARUKAZE-IMG-FALLBACK : 画像読み込み失敗時のフォールバック（自動追記） */
+.hz-img-failed{
+  background: linear-gradient(140deg,
+              var(--color-accent-light, #efeae4),
+              var(--color-bg-deep, #ddd6ce)) !important;
+  min-height: 110px;
+  position: relative;
+}
+.hz-logo-fallback{
+  display: inline-flex; align-items: center; height: 36px; padding: 0 14px;
+  border-radius: 8px; white-space: nowrap; line-height: 1;
+  font-weight: 800; font-size: .9rem; letter-spacing: .01em;
+  background: var(--color-accent-light, #efeae4);
+  color: var(--color-accent-dark, #444);
+}
+</style>
 </head>
 <body>
 
@@ -697,10 +715,78 @@
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
 
+
+<!-- HARUKAZE-FADE-FAILSAFE : フェードインのフェイルセーフ（自動追記） -->
+<script>
+(function(){
+  var SEL = '.fade-in', CLS = 'visible';
+  function showAll(){
+    var els = document.querySelectorAll(SEL);
+    for (var i = 0; i < els.length; i++) { els[i].classList.add(CLS); }
+  }
+  // 非対応ブラウザでは隠したままにしない
+  if (!('IntersectionObserver' in window)) { showAll(); return; }
+  // アニメーションを減らす設定の端末では即表示
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { showAll(); return; }
+  // 保険：何があっても3秒後には全部表示する
+  setTimeout(showAll, 3000);
+  window.addEventListener('load', function(){ setTimeout(showAll, 3000); });
+})();
+</script>
+
+<!-- HARUKAZE-IMG-FALLBACK : 画像読み込み失敗時のフォールバック（自動追記） -->
+<script>
+(function(){
+  function isLogo(img){
+    var a = img.closest ? img.closest('a,div,span') : null;
+    var cls = ((img.className || '') + ' ' + ((a && a.className) || '')).toLowerCase();
+    var alt = (img.getAttribute('alt') || '').toLowerCase();
+    if (/logo|brand/.test(cls)) return true;
+    if (/logo|ロゴ/.test(alt)) return true;
+    var src = (img.getAttribute('src') || '').toLowerCase();
+    return /logo/.test(src);
+  }
+  function labelFor(img){
+    var alt = (img.getAttribute('alt') || '').replace(/\s*(ロゴ|logo)\s*/gi, '').trim();
+    if (alt) return alt;
+    var t = (document.title || '').split(/[|｜]/)[0].trim();
+    return t || 'HOME';
+  }
+  function handle(img){
+    if (img.dataset && img.dataset.hzHandled) return;
+    if (img.dataset) img.dataset.hzHandled = '1';
+    if (isLogo(img)) {
+      var span = document.createElement('span');
+      span.className = 'hz-logo-fallback';
+      span.textContent = labelFor(img);
+      if (img.parentNode) img.parentNode.replaceChild(span, img);
+      return;
+    }
+    var p = img.parentElement;
+    if (p) p.classList.add('hz-img-failed');
+    if (img.parentNode) img.parentNode.removeChild(img);
+  }
+  // capture フェーズで拾う（error はバブリングしないため）
+  document.addEventListener('error', function(e){
+    var t = e.target;
+    if (t && t.tagName === 'IMG') handle(t);
+  }, true);
+  // スクリプト読み込み前に既に失敗していた画像も救済する
+  function sweep(){
+    var imgs = document.querySelectorAll('img');
+    for (var i = 0; i < imgs.length; i++) {
+      var im = imgs[i];
+      if (im.complete && im.naturalWidth === 0 && im.getAttribute('src')) handle(im);
+    }
+  }
+  if (document.readyState === 'complete') { sweep(); }
+  else { window.addEventListener('load', sweep); }
+})();
+</script>
 </body>
 </html>
