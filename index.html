@@ -10,27 +10,28 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="株式会社マルトミ建装 | 江東区大島の建築リフォーム・原状回復工事会社">
 <meta property="og:description" content="1986年創業・14種類の建設業許可を保有。都営住宅・公社住宅の原状回復から一般建築リフォームまで対応。東京都知事許可第75127号。">
-<meta property="og:image" content="https://images.unsplash.com/photo-1768548273807-275b0e16fff3?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:image" content="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&w=1200&q=80">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="株式会社マルトミ建装 | 江東区大島の建築リフォーム・原状回復工事会社">
 <meta name="twitter:description" content="1986年創業・14種類の建設業許可を保有。都営住宅・公社住宅の原状回復から一般建築リフォームまで対応。東京都知事許可第75127号。">
-<meta name="twitter:image" content="https://images.unsplash.com/photo-1768548273807-275b0e16fff3?auto=format&fit=crop&w=1200&q=80">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&w=1200&q=80">
 
-<link rel="icon" href="https://static.wixstatic.com/media/9df682_ba2bfd1f1d464347b349d12a89ef808d~mv2.png/v1/fill/w_120,h_120,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo.png">
+<!-- favicon: navy background + blue "マ" -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2314202c'/%3E%3Ctext x='16' y='23' font-family='sans-serif' font-size='18' font-weight='900' fill='%232f7fc1' text-anchor='middle'%3Eマ%3C/text%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy:#2b3440;
-    --navy-2:#3a4655;
+    --navy:#14202c;
+    --navy-2:#1c2c3c;
     --blue:#1f6fb2;
     --blue-dark:#164f82;
-    --bg:#f7f9fb;
+    --bg:#f5f6f8;
     --bg-card:#ffffff;
-    --text:#2b3440;
+    --text:#14202c;
     --text-sub:#57626d;
     --border:#e1e4ea;
     --font:'Noto Sans JP', sans-serif;
@@ -61,13 +62,11 @@
 
   /* ===== NAV ===== */
   .nav{position:fixed;top:0;left:0;width:100%;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:16px 24px;background:transparent;transition:background .35s ease, box-shadow .35s ease, padding .35s ease;}
-  .nav.scrolled{background:rgba(255,255,255,.97);box-shadow:0 2px 14px rgba(43,52,64,.12);padding:10px 24px;}
-  .nav-logo{font-size:16px;font-weight:900;color:var(--text);letter-spacing:.04em;line-height:1.3;
-    display:flex;align-items:center;gap:10px;}
-  .nav-logo-img{width:34px;height:34px;object-fit:contain;background:#fff;border:1px solid var(--border);border-radius:4px;padding:2px;flex-shrink:0;}
-  .nav-logo small{display:block;font-size:9.5px;font-weight:500;letter-spacing:.1em;color:var(--text-sub);}
+  .nav.scrolled{background:rgba(20,32,44,.96);box-shadow:0 2px 14px rgba(0,0,0,.18);padding:10px 24px;}
+  .nav-logo{font-size:16px;font-weight:900;color:#fff;letter-spacing:.04em;line-height:1.3;}
+  .nav-logo small{display:block;font-size:9.5px;font-weight:500;letter-spacing:.1em;color:#c7ccd4;}
   .nav-links{display:flex;align-items:center;gap:26px;}
-  .nav-links a{font-size:13px;font-weight:700;color:var(--text);opacity:.9;white-space:nowrap;}
+  .nav-links a{font-size:13px;font-weight:700;color:#fff;opacity:.88;white-space:nowrap;}
   .nav-links a:hover{opacity:1;}
   .nav-tel{display:flex;align-items:center;gap:8px;background:var(--blue);color:#fff;padding:9px 16px;border-radius:4px;font-weight:900;font-size:14px;white-space:nowrap;}
   .nav-tel svg{width:15px;height:15px;flex-shrink:0;}
@@ -78,20 +77,20 @@
 
   /* ===== HERO ===== */
   .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;overflow:hidden;}
-  .hero-bg{position:absolute;inset:0;background:linear-gradient(100deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.90) 34%,rgba(255,255,255,.55) 60%,rgba(255,255,255,.14) 100%),url('https://images.unsplash.com/photo-1753893558281-9acda0662bbd?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;background-color:var(--navy);}
+  .hero-bg{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,22,30,.55) 0%,rgba(14,22,30,.55) 40%,rgba(14,22,30,.92) 100%),url('https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;background-color:var(--navy);}
   .hero-inner{position:relative;z-index:2;padding:0 24px 88px;width:100%;}
-  .hero-license{display:inline-block;background:var(--navy);color:#fff;border:1px solid var(--navy);border-radius:3px;padding:5px 12px;font-size:11.5px;font-weight:700;letter-spacing:.04em;margin-bottom:22px;backdrop-filter:blur(2px);}
-  .hero-title{color:var(--text);font-size:clamp(28px,6vw,50px);font-weight:900;line-height:1.4;letter-spacing:.02em;margin-bottom:16px;text-shadow:0 1px 2px rgba(255,255,255,.9);}
-  .hero-sub{font-size:clamp(13px,2vw,16px);color:var(--text-sub);margin-bottom:8px;font-weight:500;}
-  .hero-area{font-size:13.5px;color:var(--text-sub);margin-bottom:30px;}
+  .hero-license{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);border-radius:3px;padding:5px 12px;font-size:11.5px;font-weight:700;letter-spacing:.04em;margin-bottom:22px;backdrop-filter:blur(2px);}
+  .hero-title{font-size:clamp(28px,6vw,50px);font-weight:900;line-height:1.4;letter-spacing:.02em;margin-bottom:16px;text-shadow:0 2px 12px rgba(0,0,0,.35);}
+  .hero-sub{font-size:clamp(13px,2vw,16px);color:#e4e7ec;margin-bottom:8px;font-weight:500;}
+  .hero-area{font-size:13.5px;color:#c7ccd4;margin-bottom:30px;}
   .hero-btns{display:flex;flex-wrap:wrap;gap:14px;}
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 28px;font-weight:900;font-size:14.5px;border-radius:3px;transition:transform .2s ease, box-shadow .2s ease;}
   .btn-primary{background:var(--blue);color:#fff;}
   .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(31,111,178,.4);}
-  .btn-outline{border:1.5px solid var(--navy);color:var(--navy);background:rgba(255,255,255,.8);}
-  .btn-outline:hover{background:var(--navy);color:#fff;}
-  .scroll-cue{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:2;font-size:10px;letter-spacing:.2em;color:var(--text-sub);opacity:.85;display:flex;flex-direction:column;align-items:center;gap:6px;}
-  .scroll-cue .line{width:1px;height:26px;background:var(--text-sub);animation:scrollLine 1.8s infinite;}
+  .btn-outline{border:1.5px solid rgba(255,255,255,.7);color:#fff;}
+  .btn-outline:hover{background:#fff;color:var(--navy);}
+  .scroll-cue{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:2;font-size:10px;letter-spacing:.2em;color:#fff;opacity:.7;display:flex;flex-direction:column;align-items:center;gap:6px;}
+  .scroll-cue .line{width:1px;height:26px;background:#fff;animation:scrollLine 1.8s infinite;}
   @keyframes scrollLine{0%{transform:scaleY(0);transform-origin:top;}50%{transform:scaleY(1);transform-origin:top;}51%{transform-origin:bottom;}100%{transform:scaleY(0);transform-origin:bottom;}}
 
   /* ===== SERVICES (photo cards) ===== */
@@ -120,13 +119,13 @@
   }
 
   /* ===== WHY / 選ばれる理由 ===== */
-  .why-section{position:relative;color:var(--text);background:linear-gradient(rgba(234,241,248,.90),rgba(234,241,248,.90)),url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;background-color:#eaf1f8;}
-  .why-section .section-lead{color:#5b6672;}
-  .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:var(--border);border:1px solid rgba(43,52,64,.10);}
-  .why-item{background:#ffffff;padding:34px 26px;}
+  .why-section{position:relative;color:#fff;background:linear-gradient(rgba(14,22,30,.90),rgba(14,22,30,.90)),url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;background-color:var(--navy);}
+  .why-section .section-lead{color:#c7ccd4;}
+  .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14);}
+  .why-item{background:rgba(20,32,44,.72);padding:34px 26px;}
   .why-num{font-size:32px;font-weight:900;color:var(--blue);line-height:1;margin-bottom:14px;}
   .why-item h3{font-size:16.5px;font-weight:900;margin-bottom:10px;}
-  .why-item p{font-size:13px;color:#5b6672;}
+  .why-item p{font-size:13px;color:#c7ccd4;}
 
   /* ===== WORKS ===== */
   .works-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;}
@@ -153,15 +152,6 @@
   .flow-tag{display:inline-block;font-size:11px;font-weight:900;color:var(--blue);letter-spacing:.06em;margin-bottom:6px;}
   .flow-note{margin-top:8px;font-size:11.5px;color:#9aa1ab;}
 
-
-  /* ===== FAQ ===== */
-  .faq-list{border-top:1px solid var(--border);}
-  .faq-item{padding:20px 4px;border-bottom:1px solid var(--border);}
-  .faq-q{font-size:15px;font-weight:900;color:var(--text);padding-left:30px;position:relative;margin-bottom:8px;}
-  .faq-q::before{content:"Q";position:absolute;left:0;top:-2px;color:var(--blue);font-size:16px;font-weight:900;}
-  .faq-a{font-size:14px;color:var(--text-sub);padding-left:30px;position:relative;line-height:1.85;}
-  .faq-a::before{content:"A";position:absolute;left:0;top:0;color:var(--text-sub);font-size:14px;font-weight:900;}
-
   /* ===== COMPANY TABLE ===== */
   .info-table{width:100%;border-collapse:collapse;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;overflow:hidden;}
   .info-table tr{border-bottom:1px solid var(--border);}
@@ -175,14 +165,14 @@
   }
 
   /* ===== LICENSE ===== */
-  .license-section{background:#f7f9fb;color:var(--text);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
-  .license-box{display:flex;flex-wrap:wrap;gap:24px;background:#ffffff;border:1px solid var(--border);border-radius:8px;padding:32px;}
+  .license-section{background:var(--navy-2);color:#fff;}
+  .license-box{display:flex;flex-wrap:wrap;gap:24px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:8px;padding:32px;}
   .license-item{flex:1;min-width:240px;}
-  .license-label{font-size:11.5px;font-weight:900;color:var(--blue);letter-spacing:.1em;margin-bottom:8px;}
+  .license-label{font-size:11.5px;font-weight:900;color:#8fc0e8;letter-spacing:.1em;margin-bottom:8px;}
   .license-value{font-size:19px;font-weight:900;letter-spacing:.02em;}
-  .license-sub{font-size:12px;color:#5b6672;margin-top:6px;}
+  .license-sub{font-size:12px;color:#c7ccd4;margin-top:6px;}
   .license-list{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px;}
-  .license-chip{background:#eef3f8;border:1px solid var(--border);border-radius:20px;padding:7px 16px;font-size:12px;font-weight:700;color:var(--text-sub);}
+  .license-chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:7px 16px;font-size:12px;font-weight:700;color:#e4e7ec;}
 
   /* ===== NEWS ===== */
   .news-list{border-top:1px solid var(--border);}
@@ -205,15 +195,15 @@
   @media(max-width:860px){.access-grid{grid-template-columns:1fr;}}
 
   /* ===== CONTACT ===== */
-  .contact-section{position:relative;color:#fff;text-align:center;background:linear-gradient(rgba(43,52,64,.80),rgba(43,52,64,.80)),url('https://images.unsplash.com/photo-1541976590-713941681591?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;background-color:var(--navy);}
+  .contact-section{position:relative;color:#fff;text-align:center;background:linear-gradient(rgba(20,32,44,.88),rgba(20,32,44,.88)),url('https://images.unsplash.com/photo-1541976590-713941681591?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;background-color:var(--navy);}
   .contact-tel-link{display:inline-flex;align-items:center;gap:16px;color:#fff;margin:26px 0 10px;}
   .contact-tel-num{font-size:clamp(34px,7vw,58px);font-weight:900;letter-spacing:.02em;}
   .contact-tel-icon{width:34px;height:34px;color:var(--blue);flex-shrink:0;}
-  .contact-hours{font-size:13px;color:#5b6672;margin-bottom:34px;}
+  .contact-hours{font-size:13px;color:#c7ccd4;margin-bottom:34px;}
   .contact-sub{display:inline-flex;align-items:center;gap:10px;font-size:14px;color:#e4e7ec;border-top:1px solid rgba(255,255,255,.2);padding-top:22px;}
 
   /* ===== FOOTER ===== */
-  footer{background:#2b3440;color:#8b93a0;padding:48px 0 100px;font-size:12.5px;}
+  footer{background:#0f161e;color:#8b93a0;padding:48px 0 100px;font-size:12.5px;}
   .footer-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;margin-bottom:26px;}
   .footer-brand{font-size:16px;font-weight:900;color:#fff;margin-bottom:8px;}
   .footer-license{font-size:11.5px;color:#8b93a0;margin-top:4px;}
@@ -243,14 +233,13 @@
 <body>
 
 <nav class="nav" id="nav">
-  <div class="nav-logo"><img class="nav-logo-img" src="https://static.wixstatic.com/media/9df682_ba2bfd1f1d464347b349d12a89ef808d~mv2.png/v1/fill/w_120,h_120,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo.png" alt="株式会社マルトミ建装 ロゴ"><span>マルトミ建装<small>MARUTOMI KENSO CO., LTD.</small></span></div>
+  <div class="nav-logo">マルトミ建装<small>MARUTOMI KENSO CO., LTD.</small></div>
   <div class="nav-links">
     <a href="#services">事業内容</a>
     <a href="#greeting">代表挨拶</a>
     <a href="#why">選ばれる理由</a>
     <a href="#works">施工事例</a>
     <a href="#flow">ご依頼の流れ</a>
-    <a href="#faq">よくある質問</a>
     <a href="#company">会社概要</a>
     <a href="#news">お知らせ</a>
     <a href="#recruit">採用情報</a>
@@ -355,7 +344,7 @@
 <section id="why" class="why-section">
   <div class="container">
     <div class="fade-in">
-      <div class="section-tag">WHY US</div>
+      <div class="section-tag" style="color:#8fc0e8;">WHY US</div>
       <h2 class="section-title"><span class="ph">選ばれる理由</span></h2>
       <p class="section-lead">創業から40年積み重ねてきた実績と、幅広い許可体制が私たちの強みです。</p>
     </div>
@@ -477,37 +466,6 @@
   </div>
 </section>
 
-<section id="faq">
-  <div class="container">
-    <div class="fade-in">
-      <div class="section-tag">FAQ</div>
-      <h2 class="section-title"><span class="ph">よくある質問</span></h2>
-    </div>
-    <div class="faq-list fade-in">
-      <div class="faq-item">
-        <div class="faq-q">対応エリアはどのあたりまでですか？</div>
-        <div class="faq-a">江東区を中心に、東京都内一円へお伺いしています。都営住宅・公社住宅の原状回復工事では都内各所での施工実績がございます。エリア外かご不明な場合も、まずはお電話でご相談ください。</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">一室だけの原状回復でもお願いできますか？</div>
-        <div class="faq-a">承ります。一室の原状回復から、集合住宅一棟の改修工事まで、規模を問わず対応しております。</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">お見積りは無料ですか？</div>
-        <div class="faq-a">現地調査・お見積りは無料で承っております。内容と金額にご納得いただいてからのご契約となります。</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">個人の住宅のリフォームも頼めますか？</div>
-        <div class="faq-a">対応しております。14種類の建設業許可を保有しており、内装・水まわりから建物全体の改修まで、一般のお住まいのご相談も承ります。</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">工事中の近隣への対応はどうなりますか？</div>
-        <div class="faq-a">着工前のご挨拶をはじめ、近隣への配慮を徹底しております。公共住宅の工事で培った進め方を、一般のお住まいでも同様に行っています。</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="company" style="background:#ffffff;">
   <div class="container">
     <div class="fade-in">
@@ -531,9 +489,9 @@
 <section id="license" class="license-section">
   <div class="container">
     <div class="fade-in">
-      <div class="section-tag">LICENSE</div>
+      <div class="section-tag" style="color:#8fc0e8;">LICENSE</div>
       <h2 class="section-title"><span class="ph">建設業許可・有資格</span></h2>
-      <p class="section-lead" style="color:#5b6672;">確かな許可に基づいて工事を行っています。</p>
+      <p class="section-lead" style="color:#c7ccd4;">確かな許可に基づいて工事を行っています。</p>
     </div>
     <div class="license-box fade-in">
       <div class="license-item">
@@ -639,7 +597,7 @@
     <div class="fade-in">
       <div class="section-tag" style="color:#8fc0e8;">CONTACT</div>
       <h2 class="section-title"><span class="ph">お問い合わせ</span></h2>
-      <p style="color:#5b6672;">原状回復・建築リフォームのご相談・お見積もりなど、お気軽にお電話ください。</p>
+      <p style="color:#c7ccd4;">原状回復・建築リフォームのご相談・お見積もりなど、お気軽にお電話ください。</p>
       <a class="contact-tel-link" href="tel:0336841838">
         <svg class="contact-tel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         <span class="contact-tel-num">03-3684-1838</span>
@@ -664,7 +622,6 @@
       <div>
         <div>営業時間　月〜金 9:00〜17:30</div>
         <div>定休日　土日祝<span class="nowrap">（お問い合わせにて対応）</span></div>
-        <div style="margin-top:8px;">X（旧Twitter）　<a href="https://twitter.com/marutomikensou" target="_blank" rel="noopener">@marutomikensou</a></div>
       </div>
     </div>
     <div class="footer-note">
@@ -697,10 +654,28 @@
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
 
+
+<!-- HARUKAZE-FADE-FAILSAFE : フェードインのフェイルセーフ（自動追記） -->
+<script>
+(function(){
+  var SEL = '.fade-in', CLS = 'visible';
+  function showAll(){
+    var els = document.querySelectorAll(SEL);
+    for (var i = 0; i < els.length; i++) { els[i].classList.add(CLS); }
+  }
+  // 非対応ブラウザでは隠したままにしない
+  if (!('IntersectionObserver' in window)) { showAll(); return; }
+  // アニメーションを減らす設定の端末では即表示
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { showAll(); return; }
+  // 保険：何があっても3秒後には全部表示する
+  setTimeout(showAll, 3000);
+  window.addEventListener('load', function(){ setTimeout(showAll, 3000); });
+})();
+</script>
 </body>
 </html>
